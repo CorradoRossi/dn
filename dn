@@ -16,3 +16,9 @@ dnt() {
 dnview() {
   find ~/dn/$1* -type f -exec basename {} \; -exec cat {} \;
 }
+
+# edit note with vscode (relies on having already setup vscode alias(es), mine is 'code')
+dntvsc() {
+  echo $(date "+%Y-%m-%d")
+  code ~/dn/$(date "+%Y-%m-%d")
+}
